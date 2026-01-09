@@ -5,8 +5,11 @@
 {% endblock texto %}
 
 {% block posts %}
-    {% include 'partials/postblock.html' %}
-    {% include 'partials/postblock.html' %}
-    {% include 'partials/postblock.html' %}
+    {% for post in posts %}
+        {% include 'partials/postblock.html' %}
+    {% endfor %}
 {% endblock posts %}
-    
+
+{% block final %}
+    FINAL DO {{ title }}
+{% endblock final %}

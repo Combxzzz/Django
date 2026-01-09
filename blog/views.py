@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from blog import data
 
 # Create your views here.
 
@@ -7,6 +8,7 @@ def blog(request):
     context = {
         'text' : 'ESTAMOS NO BLOG',
         'title' : 'Blog',
+        'posts' : data.posts,
     }
     
     return render(
@@ -18,7 +20,8 @@ def blog(request):
 def comentarios(request):
     
     context = {
-        'text' : 'ESTAMOS NO COMENTARIOS'
+        'text' : 'ESTAMOS NO COMENTARIOS',
+        'title' : 'comentarios'
     }
     
     return render(
