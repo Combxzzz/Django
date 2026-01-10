@@ -3,3 +3,14 @@
 {% block texto %}
     {{ text }}
 {% endblock texto %}
+
+{% block coments %}
+  {% for coment in coments %}
+    {% include 'partials/comentblock.html' %}
+  {% endfor %}
+{% endblock coments %}
+
+
+{% block final %}
+    FINAL DO {{ title }}
+{% endblock final %}

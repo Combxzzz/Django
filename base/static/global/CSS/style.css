@@ -29,8 +29,14 @@ body {
   box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.coment {
+  background-color: #fff;
+  padding: 1.5rem;
+  box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
 @media (min-width: 600px) {
-  .content {
+  .content:not(:has(.single-post)) {
     grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
   }
 }
